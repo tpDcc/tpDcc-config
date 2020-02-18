@@ -1,0 +1,20 @@
+language: python
+before_install:
+- pip install pycodestyle
+install:
+- pip install -r requirements.txt
+- python setup.py install
+script:
+- find . -name \*.py -exec pycodestyle --max-line-length=120 --ignore=E402 {} +
+- pytest --cov=tpRigToolkit
+after_success:
+- coveralls
+deploy:
+  skip_cleanup: true
+  provider: pypi
+  user: tpoveda
+  password:
+    secure: HPabhALOix7Pct8bv+8XYR2DieEfvmsDLmWtglK3X/ElwV40BWrWlDDMqnqHNq7zHhJgIbUxzE+qP8v1WYewoItlXz/Obetix1lsySofBe6iZZJrB4gT1h0Grka23CYnfpwFemEOC6hJX9+CvpwGR5Vbcqczqp340CpgRF1zwbwZo4sT0iAbD5fOtlPT2YI7bHRO6M92kvZBffSD8Sfuuuo+GCNXkHgCUkPO+QCp7QTV7oQLBUKD/PqOHanDFbLmhZ+ybZLIY2CP30OXfFE9SKbi4SFKRQicWaM1suyzuVJCHdzFSFI8WNciiy7vmZ6NwyS4rxuBYAFN9Y8PU0UhTLm8ucBqF1bgAWcMmbiNfEnQ7dPkki6Fmmqcwjw0BQmT0bjuiYOV0wN/GucYI73cYs3HB7gORa+a1ILhqMgME6TjaORRnblX7c6nFIAT/c9PMVkEnHP3NZZhBNx9RnD+gDqoWOexKbuy7RyVZC0qNWZ8yPuwLbnuWQWVWUkW+cAU+RItmUV1fs/MDfmZiB1bCLo4ndNjcccL+f4K/OaCHjNqgS1MkUsrvPIgsfJO5eB+ZVDFnodYnMwVF7etBRfl+4159++i5xzPe485Y6b132IbsYcQHptqPuWWuqGWTAo6xiDFyYHHK+ZUXhLZCSwojvp3z8Mjb4ubqZ2iCSEXVQ8=
+  on:
+    branch: master
+    tags: true
