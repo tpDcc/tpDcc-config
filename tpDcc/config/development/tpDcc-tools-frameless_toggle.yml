@@ -1,0 +1,59 @@
+#  Configuration file for tpDcc-tools-framelesswindow
+
+# Defines tool name
+name: DCC Frameless Window Toggle
+
+# Unique ID for the tool
+id: tpDcc-tools-frameless_toggle
+
+# Supported DCCs
+supported_dccs: []
+
+# Creator of the tool
+creator: Tomas Poveda
+
+# Defines icon of the tool
+icon: toggle
+
+# Tooltip of the tool
+tooltip: Tool that toggles windows to use tpDcc frameless functionality or OS default windows.
+
+# Tags related with this tool
+tags: ['tpDcc', 'window', 'frameless', 'toggle']
+
+# Directory where tool logger will be created
+logger_dir: ${join(user, "tpDcc", "logs", "tools")}
+
+# Default logger level used by tool logger
+logger_level: INFO
+
+# Directory where tool resources are located
+resources_path: ${join(filename, "resources")}
+
+# File that defines tool logger settings
+logging_file: ${join(filename, "__logging__.ini")}
+
+# Menu representation of this tool
+menu_ui:
+  label: "tpDcc"
+  is_checkable: False
+  is_checked: True
+  load_on_startup: False
+  color: ''
+  background_color: ''
+
+# Tool Menu definition where this tool is registered
+menu:
+  - label: Control Rig"
+    type: menu
+    children:
+      - id: tpDcc-tools-framelesstoggle
+        type: tool
+
+# Tool Shelf definition
+shelf:
+  - name: Control Rig"
+    children:
+      - id: tpDcc-tools-framelesstoggle
+        displayLabel: False
+        type: tool

@@ -1,0 +1,80 @@
+#  Configuration file for tpDcc-tools-renamer
+
+# Defines tool name
+name: Renamer
+
+# Unique ID for the tool
+id: tpDcc-tools-renamer
+
+# Supported DCCs
+supported_dccs: []
+
+# Creator of the tool
+creator: Tomas Poveda
+
+# Defines icon of the tool
+icon: renamer
+
+# Tooltip of the tool
+tooltip:  Renamer Tool to easily rename DCC objects in a visual way
+
+# Tags related with this tool
+tags: ['tpDcc', 'dcc', 'tool', 'renamer']
+
+# Directory where tool logger will be created
+logger_dir: ${join(user, "tpDcc", "logs", "tools")}
+
+# Default logger level used by tool logger
+logger_level: INFO
+
+# Directory where tool resources are located
+resources_path: ${join(filename, "resources")}
+
+# File that defines tool logger settings
+logging_file: ${join(filename, "__logging__.ini")}
+
+## Defines frameless settings for the tool
+#frameless:
+#  enabled: True
+#  force: False
+#
+## Defines dock settings for the tool
+#dock:
+#  dockable: True
+#  tabToControl: ('AttributeEditor', -1)
+#  floating: False
+#  multiple_tools: False
+
+# Menu representation of this tool
+menu_ui:
+  label: "tpDcc"
+  is_checkable: False
+  is_checked: False
+  load_on_startup: False
+  color: ''
+  background_color: ''
+
+# Tool Menu definition where this tool is registered
+menu:
+  - label: tpDcc
+    type: menu
+    children:
+      - id: tpDcc-tools-renamer
+        type: tool
+
+# Tool Shelf definition
+shelf:
+  - name: Renamer
+    children:
+      - id: tpDcc-tools-renamer
+        displayLabel: False
+        type: tool
+
+# List of categories for renamer
+categories: []
+
+# List of DCC nodes that should be discarded during renaming process
+nodes_to_discard: []
+
+# List of DCC types that should be discarded during renaming process
+types_to_discard: []
