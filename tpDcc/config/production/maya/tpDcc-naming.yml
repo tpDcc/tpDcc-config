@@ -38,6 +38,7 @@ auto_suffixes:
   group: grp
   follicle: foli
   nurbsSurface: geo
+  nurbsCurve: crv
   imagePlane: imgp
   aiAreaLight: lgt
   rsPhysicalLight: lgt
