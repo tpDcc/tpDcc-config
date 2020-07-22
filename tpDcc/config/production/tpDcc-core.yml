@@ -5,3 +5,4 @@ tools:
   - hub
   - renamer
   - nameit
+  - scripteditor
