@@ -35,6 +35,7 @@ suffixes:
 auto_suffixes:
   mesh: geo
   joint: jnt
+  jointEnd: je
   group: grp
   follicle: foli
   nurbsSurface: geo
@@ -63,3 +64,6 @@ auto_suffixes:
   controller: ctrl
   camera: cam
   clusterHandle: cls
+  poleVector: pv
+  remapValue: remap
+  expression: expr
