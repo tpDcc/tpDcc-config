@@ -1,5 +1,8 @@
 #  Configuration file for tpDcc-core
 
+libs:
+  - curves
+
 tools:
   - frameless_toggle
   - hub
