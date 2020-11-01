@@ -1,7 +1,9 @@
 #  Configuration file for tpDcc-core
 
 libs:
+  - unittests
   - curves
+  - nodegraph
 
 tools:
   - frameless_toggle
@@ -9,3 +11,4 @@ tools:
   - renamer
   - nameit
   - scripteditor
+  - unittests
